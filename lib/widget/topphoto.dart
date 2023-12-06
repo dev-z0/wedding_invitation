@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 class TopPhoto extends StatelessWidget {
   final String groom = '김대호';
@@ -24,10 +23,6 @@ class TopPhoto extends StatelessWidget {
   }
 
   Widget _subText(BuildContext context) {
-    final today = DateTime.now();
-    final difference = dday.difference(today).inDays;
-
-    String diffDayText = difference > 0 ? '결혼식 $difference일 전' : '';
     String ddayText = DateFormat('yyyy년 MM월 dd일 EEE HH:mm').format(dday);
 
     return Column(
@@ -42,13 +37,7 @@ class TopPhoto extends StatelessWidget {
         Text(
           weddingHall,
           style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
-        ),
-        SizedBox(height: 20),
-        AutoSizeText(
-          diffDayText,
-          style: TextStyle(fontSize: 14, color: Colors.black),
-          textAlign: TextAlign.center,
-        ),
+        )
       ],
     );
   }

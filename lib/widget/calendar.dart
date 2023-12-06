@@ -2,24 +2,42 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class Calendar extends StatelessWidget {
+  final DateTime dday = DateTime(2024, 2, 18, 12, 30);
+
   @override
   Widget build(BuildContext context) {
+    final today = DateTime.now();
+    final difference = dday.difference(today).inDays;
+
+    String diffDayText =
+        difference > 0 ? '\u2665 결혼식 $difference일 전 \u2665' : '';
+
     return Container(
         margin: EdgeInsetsDirectional.all(60.0),
-        child: TableCalendar(
-            focusedDay: DateTime(2024, 2, 18),
-            currentDay: DateTime(2024, 2, 18),
-            firstDay: DateTime(2024, 2, 1),
-            lastDay: DateTime(2024, 2, 29),
-            daysOfWeekHeight: 30,
-            headerStyle: HeaderStyle(
-                formatButtonVisible: false,
-                titleCentered: true,
-                leftChevronVisible: false,
-                rightChevronVisible: false),
-            calendarStyle: CalendarStyle(
-              weekendTextStyle: TextStyle(color: Colors.red),
-              outsideDaysVisible: false,
-            )));
+        child: Column(
+          children: [
+            TableCalendar(
+                focusedDay: dday,
+                currentDay: dday,
+                firstDay: DateTime(2024, 2, 1),
+                lastDay: DateTime(2024, 2, 29),
+                daysOfWeekHeight: 30,
+                headerStyle: HeaderStyle(
+                    formatButtonVisible: false,
+                    titleCentered: true,
+                    leftChevronVisible: false,
+                    rightChevronVisible: false),
+                calendarStyle: CalendarStyle(
+                  weekendTextStyle: TextStyle(color: Colors.red),
+                  outsideDaysVisible: false,
+                )),
+            SizedBox(height: 20),
+            Text(
+              diffDayText,
+              style: TextStyle(fontSize: 14, color: Colors.black),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ));
   }
 }
