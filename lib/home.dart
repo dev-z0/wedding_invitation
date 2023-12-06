@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wedding_invitation/widget/calendar.dart';
 import 'package:wedding_invitation/widget/gallery.dart';
 import 'package:wedding_invitation/widget/header.dart';
 import 'package:wedding_invitation/widget/topphoto.dart';
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     TopPhoto(),
                     Header(),
-                    //Calendar(),
+                    Calendar(),
                     //Gallery(),
                     //Map(),
                     //Account(),

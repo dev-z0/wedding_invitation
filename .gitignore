@@ -22,3 +22,5 @@ assets/.DS_Store
 .flutter-plugins-dependencies
 
 build/flutter_assets/
+
+.dart_tool/
