@@ -4,3 +4,21 @@
 build/web/.last_build_id
 
 .dart_tool/chrome-device/Default/
+
+.flutter-plugins
+
+build/.DS_Store
+
+assets/.DS_Store
+
+*.dill
+
+*.cc
+
+*.cmake
+
+*.swift
+
+.flutter-plugins-dependencies
+
+build/flutter_assets/
