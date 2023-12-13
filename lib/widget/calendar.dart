@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class Calendar extends StatelessWidget {
-  final DateTime dday = DateTime(2024, 2, 18, 12, 30);
+  final DateTime dday = DateTime(2024, 2, 18);
 
   @override
   Widget build(BuildContext context) {
     final today = DateTime.now();
-    final difference = dday.difference(today).inDays;
+    final difference = dday.difference(today).inDays + 1;
 
     String diffDayText =
         difference > 0 ? '\u2665 결혼식 $difference일 전 \u2665' : '';
