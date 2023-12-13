@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xFF313131),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            primary: const Color.fromRGBO(41, 82, 56, 100),
-          ),
+              primary: const Color.fromRGBO(41, 82, 56, 100),
+              textStyle: TextStyle(color: Color(0xFFFFFFFF))),
         ),
       ),
       home: HomePage(),
