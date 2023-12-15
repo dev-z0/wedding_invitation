@@ -72,7 +72,7 @@ class Header extends StatelessWidget {
             SizedBox(height: 10),
             _parentName(
                 _parents[2].name, _parents[3].name, ' 딸 ', '지영', '01056099732'),
-            SizedBox(height: 10),
+            SizedBox(height: 30),
             ElevatedButton(
               onPressed: showContactDialog,
               child: const Text(

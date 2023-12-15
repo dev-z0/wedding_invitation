@@ -7,6 +7,12 @@ class MapWidget extends StatelessWidget {
     return Container(
         margin: EdgeInsetsDirectional.all(50.0),
         child: Column(children: [
+          Text('오시는 길', style: TextStyle(fontSize: 18)),
+          SizedBox(height: 20),
+          Text('엘블레스 다이아몬드홀', style: TextStyle(fontSize: 20)),
+          Text('서울 서초구 강남대로 213, 스포타임 지하1층', style: TextStyle(fontSize: 15)),
+          SelectableText('02-526-0300', style: TextStyle(fontSize: 15)),
+          SizedBox(height: 30),
           Image.asset('assets/images/elbless_map.jpg', fit: BoxFit.fitWidth),
           SizedBox(height: 30),
           ElevatedButton(
