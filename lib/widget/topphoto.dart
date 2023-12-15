@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -44,37 +42,26 @@ class TopPhoto extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Column(
       children: [
-        SizedBox(
-            height: MediaQuery.of(context).size.height,
-            child: Column(
-              children: [
-                Stack(
-                  alignment: Alignment.bottomCenter,
-                  children: [
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.75,
-                      child: Image.asset('assets/images/1.jpg',
-                          fit: BoxFit.fitWidth),
-                    ),
-                    Container(
-                      height: 150,
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              colors: [
-                            Color(0xFFFFFFFF).withOpacity(0.0),
-                            Color(0xFFFFFFFF)
-                          ],
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter)),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 40),
-                _subText(context),
-              ],
-            )),
+        Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            SizedBox(
+              child: Image.asset('assets/images/1.jpg', fit: BoxFit.fitWidth),
+            ),
+            Container(
+              height: 150,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                Color(0xFFFFFFFF).withOpacity(0.0),
+                Color(0xFFFFFFFF)
+              ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+            ),
+          ],
+        ),
+        SizedBox(height: 40),
+        _subText(context),
       ],
     );
   }

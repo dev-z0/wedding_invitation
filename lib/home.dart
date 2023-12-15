@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wedding_invitation/widget/account.dart';
 import 'package:wedding_invitation/widget/calendar.dart';
+import 'package:wedding_invitation/widget/footer.dart';
 import 'package:wedding_invitation/widget/gallery.dart';
 import 'package:wedding_invitation/widget/header.dart';
 import 'package:wedding_invitation/widget/share.dart';
@@ -32,7 +33,7 @@ class _HomePageState extends State<HomePage> {
                     MapWidget(),
                     AccountInfo(),
                     Share(),
-                    //FooterPhoto()
+                    FooterPhoto()
                   ],
                 ),
               ),
