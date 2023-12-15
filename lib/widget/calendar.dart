@@ -22,6 +22,7 @@ class Calendar extends StatelessWidget {
                 firstDay: DateTime(2024, 2, 1),
                 lastDay: DateTime(2024, 2, 29),
                 daysOfWeekHeight: 30,
+                availableGestures: AvailableGestures.none,
                 headerStyle: HeaderStyle(
                     formatButtonVisible: false,
                     titleCentered: true,
@@ -34,7 +35,7 @@ class Calendar extends StatelessWidget {
             SizedBox(height: 20),
             Text(
               diffDayText,
-              style: TextStyle(fontSize: 14, color: Colors.black),
+              style: TextStyle(fontSize: 15),
               textAlign: TextAlign.center,
             ),
           ],
