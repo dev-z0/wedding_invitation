@@ -53,6 +53,7 @@ class AccountInfo extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 30),
         ]));
   }
 
@@ -96,7 +97,7 @@ List<Account> getGroomAccounts() {
 
 List<Account> getBrideAccounts() {
   return [
-    Account('김윤수', '카카오뱅크', '070111149380'),
-    Account('김지영', '카카오뱅크', '3333060473547'),
+    Account('신부아버님 김윤수', '국민은행', '815010290140'),
+    Account('신부 김지영', '카카오뱅크', '3333060473547'),
   ];
 }

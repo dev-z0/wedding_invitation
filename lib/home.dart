@@ -3,6 +3,7 @@ import 'package:wedding_invitation/widget/account.dart';
 import 'package:wedding_invitation/widget/calendar.dart';
 import 'package:wedding_invitation/widget/gallery.dart';
 import 'package:wedding_invitation/widget/header.dart';
+import 'package:wedding_invitation/widget/share.dart';
 import 'package:wedding_invitation/widget/topphoto.dart';
 import 'package:wedding_invitation/widget/map.dart';
 
@@ -30,7 +31,7 @@ class _HomePageState extends State<HomePage> {
                     //Gallery(),
                     MapWidget(),
                     AccountInfo(),
-                    //Share(),
+                    Share(),
                     //FooterPhoto()
                   ],
                 ),
