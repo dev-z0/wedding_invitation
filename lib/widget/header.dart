@@ -87,7 +87,10 @@ class Header extends StatelessWidget {
             SizedBox(height: 10),
             ElevatedButton(
               onPressed: showContactDialog,
-              child: const Text('혼주에게 연락하기'),
+              child: const Text(
+                '혼주에게 연락하기',
+                style: TextStyle(color: Colors.white),
+              ),
             )
           ],
         ));
