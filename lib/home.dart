@@ -1,3 +1,5 @@
+import 'dart:ui_web';
+
 import 'package:flutter/material.dart';
 import 'package:wedding_invitation/widget/account.dart';
 import 'package:wedding_invitation/widget/calendar.dart';
@@ -29,7 +31,7 @@ class _HomePageState extends State<HomePage> {
                     TopPhoto(),
                     Header(),
                     Calendar(),
-                    //Gallery(),
+                    Gallery(),
                     MapWidget(),
                     AccountInfo(),
                     Share(),

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: '대호&지영 결혼식에 초대합니다',
       theme: ThemeData(
         fontFamily: 'Plex',
-        scaffoldBackgroundColor: const Color(0xFF313131),
+        scaffoldBackgroundColor: Color.fromARGB(188, 132, 169, 242),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
               backgroundColor: const Color.fromRGBO(41, 82, 56, 100),

@@ -64,7 +64,7 @@ class Header extends StatelessWidget {
             AutoSizeText(
               '2월의 어느 멋진 날,\n\n저희 두 사람이 이제 믿음과 사랑으로\n\n한 길을 가고자 합니다.\n\n새로운 인생을 시작하는 자리에\n\n함께해 주시기 바랍니다.',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+              style: TextStyle(fontSize: 15),
             ),
             SizedBox(height: 50),
             _parentName(

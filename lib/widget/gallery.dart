@@ -1,63 +1,76 @@
 import 'package:flutter/material.dart';
 import 'package:wedding_invitation/model/photo.dart';
-import 'package:wedding_invitation/widget/page_transformer.dart';
-import 'package:wedding_invitation/widget/photo_card.dart';
-
-
 
 class Gallery extends StatelessWidget {
-  Widget _buildImage(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.1,
-      child: Image.asset(
-        'assets/images/flower.png',
-        fit: BoxFit.contain,
-      ),
-    );
-  }
-
-  Widget _buildTitleText() {
-    return Container(
-      child: Text(
-        'Photo Gallery',
-        style: TextStyle(
-          color: const Color.fromRGBO(41, 82, 56, 100),
-          fontWeight: FontWeight.bold,
-          fontSize: 20,
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        _buildImage(context),
-        _buildTitleText(),
-        SizedBox(height: 50.0),
-        SizedBox.fromSize(
-          size: const Size.fromHeight(500.0),
-          child: PageTransformer(
-            pageViewBuilder: (context, visibilityResolver) {
-              return PageView.builder(
-                controller: PageController(viewportFraction: 0.85),
-                itemCount: photoItems.length,
-                itemBuilder: (context, index) {
-                  final item = photoItems[index];
-                  final pageVisibility =
-                      visibilityResolver.resolvePageVisibility(index);
+    void myDialog(int itemIndex) {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return Dialog.fullscreen(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.75,
+                  child: Image.asset(photoItems[itemIndex].imageUrl),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: const Icon(Icons.close),
+                )
+              ],
+            ),
+          );
+        },
+      );
+    }
 
-                  return PhotoCardItem(
-                    item: item,
-                    pageVisibility: pageVisibility,
-                  );
-                },
-              );
-            },
-          ),
-        ),
-      ],
+    Widget photoCell(int itemIndex) {
+      return GestureDetector(
+          onTap: () {
+            myDialog(itemIndex);
+          },
+          child: Image.asset(photoItems[itemIndex].imageUrl,
+              fit: BoxFit.cover, height: 120));
+    }
+
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Column(
+        children: [
+          Text('Gallery', style: TextStyle(fontSize: 18)),
+          SizedBox(height: 20),
+          Table(
+              border:
+                  TableBorder.all(color: const Color(0xFFFFFFFF), width: 10),
+              children: [
+                TableRow(children: [
+                  photoCell(1),
+                  photoCell(2),
+                  photoCell(3),
+                ]),
+                TableRow(children: [
+                  photoCell(4),
+                  photoCell(5),
+                  photoCell(6),
+                ]),
+                TableRow(children: [
+                  photoCell(7),
+                  photoCell(8),
+                  photoCell(9),
+                ]),
+                TableRow(children: [
+                  photoCell(10),
+                  photoCell(11),
+                  photoCell(12),
+                ]),
+              ]),
+        ],
+      ),
     );
   }
 }
