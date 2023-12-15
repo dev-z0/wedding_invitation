@@ -88,13 +88,7 @@ class Header extends StatelessWidget {
             ElevatedButton(
               onPressed: showContactDialog,
               child: const Text('혼주에게 연락하기'),
-            ),
-            // AutoSizeText('2024년 2월 18일 일요일\n낮 12시 30분',
-            //     textAlign: TextAlign.center,
-            //     style: TextStyle(
-            //         color: const Color.fromRGBO(41, 82, 56, 100),
-            //         fontWeight: FontWeight.bold,
-            //         fontSize: 20)),
+            )
           ],
         ));
   }
