@@ -26,3 +26,5 @@ build/flutter_assets/
 .dart_tool/
 
 *.stamp
+
+lib/.DS_Store
