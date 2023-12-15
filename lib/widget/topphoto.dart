@@ -48,7 +48,8 @@ class TopPhoto extends StatelessWidget {
           alignment: Alignment.bottomCenter,
           children: [
             SizedBox(
-              child: Image.asset('assets/images/1.jpg', fit: BoxFit.fitWidth),
+              child: Image.asset('assets/images/1.jpg',
+                  fit: BoxFit.fitWidth, scale: 0.7),
             ),
             Container(
               height: 150,
