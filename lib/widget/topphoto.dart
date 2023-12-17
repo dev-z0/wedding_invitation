@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:wedding_invitation/model/wedding_info.dart';
 
 class TopPhoto extends StatelessWidget {
-  final String groom = '김대호';
-  final String bride = '김지영';
-  final DateTime dday = DateTime(2024, 2, 18, 12, 30);
-  final String weddingHall = '엘블레스 다이아몬드홀';
-
   Widget _mainText() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -21,7 +17,7 @@ class TopPhoto extends StatelessWidget {
   }
 
   Widget _subText(BuildContext context) {
-    String ddayText = DateFormat('yyyy년 MM월 dd일 EEE HH:mm').format(dday);
+    String ddayText = DateFormat('yyyy년 MM월 dd일 EEE HH:mm').format(ddayTime);
 
     return Column(
       children: [
@@ -33,7 +29,7 @@ class TopPhoto extends StatelessWidget {
         ),
         SizedBox(height: 5),
         Text(
-          weddingHall,
+          weddingHall.name,
           style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
         )
       ],
