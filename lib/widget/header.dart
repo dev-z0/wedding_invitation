@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:wedding_invitation/model/parents.dart';
 
 class Header extends StatelessWidget {
   final List<Parent> _parents = getParents();
@@ -83,20 +84,4 @@ class Header extends StatelessWidget {
           ],
         ));
   }
-}
-
-class Parent {
-  Parent(this.name, this.relation, this.phone);
-  String name;
-  String relation;
-  String phone;
-}
-
-List<Parent> getParents() {
-  return [
-    Parent('김길우', '신랑아버님', '01091206078'),
-    Parent('유인숙', '신랑어머님', '01089112998'),
-    Parent('김윤수', '신부아버님', '01022989732'),
-    Parent('조영숙', '신부어머님', '01056699732'),
-  ];
 }
