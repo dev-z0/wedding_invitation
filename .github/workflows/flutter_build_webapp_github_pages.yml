@@ -14,7 +14,6 @@ jobs:
         with:
           channel: "master"
       - run: flutter pub get
-      - run: flutter pub outdated
       - run: flutter config --enable-web
       - run: flutter build web --base-href "/wedding_invitation/"
 
