@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:wedding_invitation/model/wedding_info.dart';
 
 class Calendar extends StatelessWidget {
+  final DateTime dday = DateTime(2024, 2, 18);
+
   @override
   Widget build(BuildContext context) {
     final today = DateTime.now();

@@ -38,8 +38,8 @@ class Gallery extends StatelessWidget {
               fit: BoxFit.cover, height: 120));
     }
 
-    return Container(
-      margin: EdgeInsetsDirectional.all(20.0),
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
       child: Column(
         children: [
           Text('Gallery', style: TextStyle(fontSize: 18)),
