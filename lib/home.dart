@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_icons/flutter_app_icons.dart';
 import 'package:wedding_invitation/widget/account.dart';
 import 'package:wedding_invitation/widget/calendar.dart';
 import 'package:wedding_invitation/widget/footer.dart';
@@ -14,8 +15,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final _flutterAppIconsPlugin = FlutterAppIcons();
   @override
   Widget build(BuildContext context) {
+    _flutterAppIconsPlugin.setIcon(icon: 'assets/images/favicon.png');
     return Scaffold(
         body: Align(
             alignment: Alignment.center,
