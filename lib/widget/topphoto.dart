@@ -17,7 +17,7 @@ class TopPhoto extends StatelessWidget {
   }
 
   Widget _subText(BuildContext context) {
-    String ddayText = DateFormat('yyyy년 MM월 dd일 EEE HH:mm').format(ddayTime);
+    String ddayText = DateFormat('yyyy년 MM월 dd일 EEE HH:mm').format(dday);
 
     return Column(
       children: [
