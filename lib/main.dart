@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_icons/flutter_app_icons.dart';
 import 'package:wedding_invitation/home.dart';
 import 'package:meta_seo/meta_seo.dart';
 import 'package:flutter/foundation.dart';
 
+final _flutterAppIconsPlugin = FlutterAppIcons();
 void main() {
   if (kIsWeb) {
     MetaSEO().config();
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (kIsWeb) {
+      _flutterAppIconsPlugin.setIcon(icon: 'assets/images/favicon.png');
       MetaSEO meta = MetaSEO();
       // add meta seo data for web app as you want
       meta.ogTitle(ogTitle: '대호&지영 결혼합니다');
