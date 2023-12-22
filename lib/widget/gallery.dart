@@ -31,7 +31,7 @@ class Gallery extends StatelessWidget {
                     );
                   },
                 ),
-                IconButton(
+                IconButton.filledTonal(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
