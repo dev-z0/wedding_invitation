@@ -10,13 +10,14 @@ class Gallery extends StatelessWidget {
         context: context,
         builder: (context) {
           return Dialog.fullscreen(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            child: Stack(
+              alignment: Alignment.bottomCenter,
               children: [
                 CarouselSlider.builder(
                   options: CarouselOptions(
+                    height: MediaQuery.of(context).size.height,
                     initialPage: itemIndex,
-                    viewportFraction: 1,
+                    viewportFraction: 0.9,
                     enlargeCenterPage: true,
                     onPageChanged: (index, reason) {},
                   ),
@@ -24,7 +25,9 @@ class Gallery extends StatelessWidget {
                   itemBuilder: (context, index, realIndex) {
                     return SizedBox(
                       height: MediaQuery.of(context).size.height * 0.75,
-                      child: Image.asset(photoItems[index].imageUrl),
+                      child: Image.asset(
+                        photoItems[index].imageUrl,
+                      ),
                     );
                   },
                 ),
@@ -33,7 +36,7 @@ class Gallery extends StatelessWidget {
                     Navigator.of(context).pop();
                   },
                   icon: const Icon(Icons.close),
-                )
+                ),
               ],
             ),
           );
