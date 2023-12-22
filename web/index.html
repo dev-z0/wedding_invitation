@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -18,7 +19,7 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="대호&지영 결혼합니다">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,10 +27,17 @@
   <meta name="apple-mobile-web-app-title" content="wedding_invitation">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <!-- meta -->
+  <meta property="og:title" content="대호&지영 결혼합니다" />
+  <meta property="og:description" content="2024년 02월 18일" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dev-z0.github.io/wedding_invitation/" />
+  <meta property="og:image" content="https://dev-z0.github.io/wedding_invitation/assets/assets/images/10.jpg" />
 
-  <title>wedding_invitation</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <title>대호&지영 결혼합니다</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
@@ -38,17 +46,87 @@
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+
+
+  <style>
+    .lds-heart {
+      position: absolute;
+      top: 45%;
+      left: 45%;
+      width: 80px;
+      height: 80px;
+      transform: rotate(45deg);
+      transform-origin: 40px 40px;
+    }
+
+    .lds-heart div {
+      top: 32px;
+      left: 32px;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background: #ff0000;
+      animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    .lds-heart div:after,
+    .lds-heart div:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: #ff0000;
+    }
+
+    .lds-heart div:before {
+      left: -24px;
+      border-radius: 50% 0 0 50%;
+    }
+
+    .lds-heart div:after {
+      top: -24px;
+      border-radius: 50% 50% 0 0;
+    }
+
+    @keyframes lds-heart {
+      0% {
+        transform: scale(0.95);
+      }
+
+      5% {
+        transform: scale(1.1);
+      }
+
+      39% {
+        transform: scale(0.85);
+      }
+
+      45% {
+        transform: scale(1);
+      }
+
+      60% {
+        transform: scale(0.95);
+      }
+
+      100% {
+        transform: scale(0.9);
+      }
+    }
+  </style>
 </head>
+
 <body>
   <script>
-    window.addEventListener('load', function(ev) {
+    window.addEventListener('load', function (ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
             appRunner.runApp();
           });
         }
@@ -56,4 +134,5 @@
     });
   </script>
 </body>
+
 </html>
