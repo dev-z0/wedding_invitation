@@ -73,8 +73,17 @@ class AccountInfo extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ))));
             },
-            child: Text('${info.depositor} \u2022 ${info.bank}',
-                textAlign: TextAlign.center),
+            child: Column(
+              children: [
+                Text('${info.depositor} \u2022 ${info.bank}',
+                    textAlign: TextAlign.center),
+                Text(
+                  info.num,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 13.0),
+                ),
+              ],
+            ),
           );
         }).toList());
   }
