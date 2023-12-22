@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:wedding_invitation/model/photo.dart';
 
@@ -12,9 +13,20 @@ class Gallery extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.75,
-                  child: Image.asset(photoItems[itemIndex].imageUrl),
+                CarouselSlider.builder(
+                  options: CarouselOptions(
+                    initialPage: itemIndex,
+                    viewportFraction: 1,
+                    enlargeCenterPage: true,
+                    onPageChanged: (index, reason) {},
+                  ),
+                  itemCount: photoItems.length,
+                  itemBuilder: (context, index, realIndex) {
+                    return SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.75,
+                      child: Image.asset(photoItems[index].imageUrl),
+                    );
+                  },
                 ),
                 IconButton(
                   onPressed: () {

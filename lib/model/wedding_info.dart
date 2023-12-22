@@ -1,5 +1,4 @@
-final DateTime dday = DateTime(2024, 2, 18);
-final DateTime ddayTime = DateTime(2024, 2, 18, 12, 30);
+final DateTime dday = DateTime(2024, 2, 18, 12, 30);
 
 const String groom = '김대호';
 const String bride = '김지영';
